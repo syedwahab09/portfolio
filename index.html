@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://kit.fontawesome.com/507ca2c19d.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <!-------------------------------------header------------------------------------------->
+    <div id="header">
+
+        <div class="container">
+            <nav>
+                <img src="/images/logo.jpg">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p><span>//</span>Full Stack Developer</p>
+                <h1>Hi, Iam <span>Syed Wahab</span> From India</h1>
+            </div>
+        </div>
+    </div>
+    <!-----------------------------about------------------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="/images/about.jpg" height="500px" width="350px">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-tittle">About Me</h1>
+                    <p>Full Stack Web Application Developer with Strong Programming skills. Being enthusiastic in learning, I search and experiment new technologies.I firmly believe that having good knowledge on Agile along with strong technical knowledge, best engineering practices and interpersonal skills can bring a best engineer out of me.</p>
+                    <div class="tab-titlle">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>HTML</span><br>Creating Web Pages</li>
+                            <li><span>CSS</span><br>Used With HTML To Design Websites</li>
+                            <li><span>BOOTSTRAP</span><br>Open Source Front-End Development Framework For The Creation Of Websites And Web Apps</li>
+                            <li><span>JAVASCRIPT</span><br>A Dynamic Programming Language That's Used For Web Developments</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2019-2023</span><br>B.E./B.Tech From Vignan University<br>CGPA-8.6</li>
+                            <li><span>2017-2019</span><br>12th From Sri Chaitanya Junior College<br>CGPA-9.3</li>
+                            <li><span>2016-2017</span><br>10th From St Patricks High School<br>CGPA-9.0</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-------------------------------------------------portfolio---------------------------------------------------------------->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-tittle">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="/images/project1.png" height="250px" width="550px">
+                    <div class="layer">
+                        <h3>PMP Batteries eCommerce Website</h3>
+                        <p>This website contains full overview of PMP Batteries and their products and services.</p>
+                        <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="/images/project2.png" height="250px" width="550px">
+                    <div class="layer">
+                        <h3>Netflix Clone website</h3> 
+                        <p>The Netflix Clone website was built by using HTML,CSS and JAVASCRIPT.</p>
+                        <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------------------------------------------contact---------------------------------------------------->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-tittle">Contact Me</h1>
+                    <div class="email">
+                        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:syedwahab090301@gmail.com" >syedwahab090301@gmail.com</a></p>
+                    </div>
+                    
+                    
+                    <p><i class="fa-solid fa-phone"></i> 8688592855</p>
+                    <div class="social-icons">
+                        <ul>
+                            <li><a href="https://wa.me/8688592855"><i class="fa-brands fa-square-whatsapp"></i></a></li>
+                            <li><a href="https://instagram.com/wahab_syed09?igshid=YmMyMTA2M2Y="><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/syed-wahab-059a9b202"><i class="fa-brands fa-linkedin"></i></a></li>
+                            <li><a href="https://www.snapchat.com/add/swahab9219?share_id=GTWL1e46LMw&locale=en-IN"><i class="fa-brands fa-square-snapchat"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="btn">
+                        <a href="">Download CV</a>
+                    </div>
+
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name"
+                        required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--------------------------------------script for about------------------------------------->
+    <script>
+        let tabLinks=document.getElementsByClassName("tab-links");
+        let tabContents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tabLink of tabLinks){
+                tabLink.classList.remove("active-link");
+
+            }
+            for(tabContent of tabContents){
+                tabContent.classList.remove("active-tab");
+
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+<!---------------------------------------script for side menu---------------------------------------------------->
+    <script>
+        var sidemeu=document.getElementById("sidemenu");
+        function openmenu(){
+            sidemeu.style.right="0";
+        }
+
+        function closemenu(){
+            sidemeu.style.right="-200px";
+        }
+    </script>
+<!---------------------------------------------------script for form--------------------------------------------------->
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzo3qx5h2Art_VHVB6kyuniIECB8_nLV8NlyuUSaO0RQuRtJlUUp97aOZTjW00ZuZw/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    const msg=document.getElementById("msg");
+
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
